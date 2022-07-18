@@ -239,7 +239,7 @@ article#hablemos {
     display: inline-block;
     border-radius: 5px;
     margin: 20px;
-    padding: 12px;
+    padding: 12px; 
 }
 
 .redes a :hover {
