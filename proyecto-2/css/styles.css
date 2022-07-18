@@ -1,0 +1,316 @@
+/* Fonts */
+/* Importar aquí la font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Source+Sans+Pro:ital,wght@1,200&display=swap');
+
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador. 
+*/
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    /*interlineado*/
+    line-height: 1, 2;
+    background-color: #fbfbfb;
+    color: #0f0f0f;
+}
+
+ul {
+    /* Para quitar los puntos a los items de listas*/
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cv {
+   
+    background-color: #af599e;
+    color: #fbfbfb;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    display: inline-block;
+
+}
+
+
+.cv a:hover {
+    
+    background-color: #e4b0d9;
+    /*porque no se cambia de color cuando paso el maouse :( */
+    transition: background-color 0, 3s; 
+}
+
+h1 {
+    
+    font-size:  36px;
+    
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+}
+p  {
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 20px 0;
+    
+}
+
+.logo {
+    width: 100px;
+}
+
+.Ivi {
+    max-width: 300px;
+    border-radius: 50%;
+    border: solid rgba(107, 15, 95, 0.692);
+    margin: 50px;
+    float: left;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    width: 100%;
+    height: 90px;
+    background-color: #efd4ea;
+    background-size: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 3px 10px -5px #5f5f5f;
+
+}
+
+#menu-button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 26px;
+    width: 40px;
+    height: 40px;
+}
+
+img#close-menu {
+    display: none;
+}
+
+.logo {
+    width: 120px;
+}
+
+/* 
+Para que los enlaces hereden el color de texto y no tengan subrayado
+
+MENU DE NAVEGACION*/
+
+nav {
+    display: none;
+}
+
+ul#menu {
+    display: flex;
+    font-size: 20px;
+}
+ /*porque no reconoce cuando se pasa el mause :( */
+li.menu-item a {
+    padding: 16px;
+    display: inline-block;
+
+}
+/* Agreo estilos para el .menu-item.active*/
+
+li.menu-item:hover
+{
+    background-color: rgba(220, 66, 215, 0.3);
+    transition: background-color 0, 3s;   
+    color: #fbfbfb;
+}
+
+/* Estilos para menu mobile */
+body.mobile-menu-active {
+	overflow: hidden;
+}
+
+body.mobile-menu-active img#close-menu {
+	display: block;
+}
+
+body.mobile-menu-active img#open-menu {
+	display: none;
+}
+
+body.mobile-menu-active header {
+	height: 100vh;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	transition: height 0.3s;
+}
+
+body.mobile-menu-active nav {
+	display: block;
+	width: 100%;
+	height: 50%;
+}
+
+body.mobile-menu-active ul#menu {
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+}
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 16px;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+figure.Ivi{
+    margin-bottom: 20px;
+}
+
+figure.Ivi img
+{
+    border-radius: 50px;
+    width: 400px;
+}
+
+article.Ivi{
+    width: 100%;
+}
+
+/* Sección Contacto */
+
+section #contacto p {
+    text-align: center;
+    max-width: 600px;
+
+}
+
+article#hablemos {
+    
+    background-color: rgba(175, 89, 158, 0.3);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  
+}
+
+
+#redes-sociales  {
+    display: flex;
+    margin-top: 20px;
+}
+
+#redes-sociales a img {
+
+    display: inline-block;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 12px;
+}
+
+.redes a :hover {
+    background-color: rgba(175, 89, 158, 0.3);
+    transition: background-color 0.3s;
+}
+
+#Logo {
+
+    width: 80px;
+
+}
+ 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    background-color: #af599e;
+    color: #fff;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 48px;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    section#inicio {
+        flex-direction: row;
+    }
+
+    article.Ivi {
+        width: 50%;
+    }
+    .redes {
+        margin: 32px;
+    }
+
+     /* Para resolver conflictos por menú mobile */
+     #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    body.mobile-menu-active header {
+		height: 90px;
+		align-items: center;
+	}
+	body.mobile-menu-active nav {
+		height: auto;
+		width: auto;
+	}
+
+	body.mobile-menu-active ul#menu {
+		flex-direction: row;
+	}
+
+}
+
+
+
+
+
+
+
