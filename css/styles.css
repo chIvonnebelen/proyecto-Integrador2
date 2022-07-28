@@ -1,9 +1,12 @@
 /* Fonts */
 /* Importar aquí la font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Source+Sans+Pro:ital,wght@1,200&display=swap');
+@import url(@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap');
+    
+
+/*'https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Source+Sans+Pro:ital,wght@1,200&display=swap'); 
 
 
-/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+ Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
 *  cuyos valores asigna por defecto el navegador. 
 */
 
@@ -17,12 +20,12 @@
 }
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Catamaran', sans-serif;
     font-size: 18px;
-    /*interlineado*/
-    line-height: 1, 2;
-    background-color: #fbfbfb;
-    color: #0f0f0f;
+    /*interlineado importante es (.) no (,))*/
+    line-height: 1.2;
+    background-color: #fffdfd;
+    color: #8b5c3b;
 }
 
 ul {
@@ -38,7 +41,7 @@ a {
 
 .cv {
    
-    background-color: #af599e;
+    background-color: #dba589;
     color: #fbfbfb;
     padding: 12px 20px;
     border-radius: 50px;
@@ -50,7 +53,7 @@ a {
 
 .cv a:hover {
     
-    background-color: #e4b0d9;
+    background-color: #e5b79d ;
     /*porque no se cambia de color cuando paso el maouse :( */
     transition: background-color 0, 3s; 
 }
@@ -58,12 +61,11 @@ a {
 h1 {
     
     font-size:  36px;
-    
+    text-align: center;
 }
 
 h2 {
-    font-size: 32px;
-    text-align: center;
+    font-size: 28px;
 }
 p  {
     line-height: 1.6;
@@ -72,6 +74,9 @@ p  {
     
 }
 
+/* Responsive */
+img {max-width: 100%;}
+
 .logo {
     width: 100px;
 }
@@ -79,7 +84,7 @@ p  {
 .Ivi {
     max-width: 300px;
     border-radius: 50%;
-    border: solid rgba(107, 15, 95, 0.692);
+    border: solid #e96268;
     /*margin: 50px;
     float: left;*/
 }
@@ -92,7 +97,7 @@ header {
     padding: 16px;
     width: 100%;
     height: 90px;
-    background-color: #efd4ea;
+    background-color: #FAEBEB;
     background-size: 100%;
     position: fixed;
     top: 0;
@@ -115,7 +120,7 @@ img#close-menu {
 }
 
 .logo {
-    width: 120px;
+    width: 100px;
 }
 
 /* 
@@ -137,11 +142,11 @@ li.menu-item a {
     display: inline-block;
 
 }
-/* Agreo estilos para el .menu-item.active*/
+/* Agrego estilos para el .menu-item.active*/
 
-li.menu-item:hover
+li.menu-item:hover, li.menu-item.active
 {
-    background-color: rgba(220, 66, 215, 0.3);
+    background-color:  #dba589;;
     transition: background-color 0, 3s;   
     color: #fbfbfb;
 }
@@ -192,10 +197,18 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
    /* padding: 16px;  solucionarlo con un max-with*/ 
     min-height: 100vh;
     padding-top: 120px;
 }
+/* Sección Inicio */
+section#inicio {
+    justify-content: space-around;
+    flex-direction: column;
+}
+
 
 figure.Ivi{
     margin-bottom: 20px;
@@ -221,7 +234,8 @@ section #contacto p {
 
 article#hablemos {
     
-    background-color: rgba(175, 89, 158, 0.3);
+    background-color:  #CFC2C2;
+    color: #fbfbfb;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
@@ -238,12 +252,12 @@ article#hablemos {
 
     display: inline-block;
     border-radius: 5px;
-    margin: 20px;
-    padding: 12px;
+    margin: 16px;
+    padding: 8px;
 }
 
 .redes a :hover {
-    background-color: rgba(175, 89, 158, 0.3);
+    background-color: #CFC2C2;
     transition: background-color 0.3s;
 }
 
@@ -258,7 +272,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 90px;
-    background-color: #af599e;
+    background-color: #b98063;
     color: #fff;
 }
 
@@ -275,6 +289,7 @@ footer {
 
     section#inicio {
         flex-direction: row;
+        margin-left: 20px ;
     }
 
     article.Ivi {
@@ -307,6 +322,129 @@ footer {
 	}
 
 }
+
+/* inicio fondo animado */
+#area{
+    background:  #fffdfd;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;     
+}
+
+.circles{
+    position:block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: fixed;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(181, 108, 108, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+
 
 
 
