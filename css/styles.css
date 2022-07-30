@@ -39,7 +39,7 @@ a {
     color: inherit;
 }
 
-.cv {
+a.cv {
    
     background-color: #dba589;
     color: #fbfbfb;
@@ -51,10 +51,13 @@ a {
 }
 
 
-.cv a:hover {
+a.cv:hover {
     
-    background-color: #e5b79d ;
-    /*porque no se cambia de color cuando paso el maouse :( */
+    background-color: transparent;
+    color: #af5b2a;
+    /*para que tome bien el hover tiene que estar llamdo correctamente ( */
+    border: 2px solid rgba(233, 36, 14, 0.76);
+
     transition: background-color 0, 3s; 
 }
 
@@ -85,6 +88,7 @@ img {max-width: 100%;}
     max-width: 300px;
     border-radius: 50%;
     border: solid #e96268;
+    margin-bottom: 20px;
     /*margin: 50px;
     float: left;*/
 }
@@ -144,7 +148,7 @@ li.menu-item a {
 }
 /* Agrego estilos para el .menu-item.active*/
 
-li.menu-item:hover, li.menu-item.active
+li.menu-item :hover, li.menu-item.active
 {
     background-color:  #dba589;;
     transition: background-color 0, 3s;   
@@ -293,8 +297,18 @@ footer {
         margin-left: 20px ;
     }
 
+    article#texto1 {
+        width: 50%;
+        margin-left:20px;
+    }
+
     article.Ivi {
         width: 50%;
+    }
+
+    article#hablemos{
+        max-width: 50%;
+
     }
     .redes {
         margin: 32px;
