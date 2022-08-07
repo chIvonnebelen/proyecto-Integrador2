@@ -24,7 +24,7 @@ body {
     font-size: 18px;
     /*interlineado importante es (.) no (,))*/
     line-height: 1.2;
-    background-color: #fffdfd;
+    background-color: hsl(0, 100%, 100%);
     color: #8b5c3b;
 }
 
@@ -54,7 +54,7 @@ a.cv {
 a.cv:hover {
     
     background-color: transparent;
-    color: #af5b2a;
+    color: hsl(22, 61%, 43%);
     /*para que tome bien el hover tiene que estar llamdo correctamente ( */
     border: 2px solid rgba(233, 36, 14, 0.76);
 
@@ -88,6 +88,8 @@ img {max-width: 100%;}
     max-width: 300px;
     border-radius: 50%;
     border: solid #e96268;
+
+
     margin-bottom: 20px;
     /*margin: 50px;
     float: left;*/
@@ -239,7 +241,7 @@ section #contacto p {
 
 article#hablemos {
     
-    background-color:  #CFC2C2;
+    background-color:  hsl(0, 12%, 79%);
     color: #fbfbfb;
     text-align: center;
     padding: 20px;
